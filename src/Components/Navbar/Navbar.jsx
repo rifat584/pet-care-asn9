@@ -1,7 +1,13 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = use(AuthContext);
+  const handleLogOut = () => {
+    logOut();
+  };
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -14,13 +20,12 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
@@ -38,7 +43,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="text-2xl font-bold">Test</a>
+        <Link to={"/"} className="text-2xl font-bold">
+          Pet Care
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -54,7 +61,23 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        {user ? (
+          <div className="flex gap-4 items-center">
+            <img
+              src={user.photoURL}
+              alt=""
+              className="h-8 w-8 rounded-full"
+              title={user.displayName}
+            />
+            <button className="btn btn-primary" onClick={handleLogOut}>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to={"/login"} className="btn btn-primary">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

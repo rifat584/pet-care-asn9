@@ -1,16 +1,99 @@
-# React + Vite
+# ❄️ WarmPaws – Winter Pet Care Platform 🐾
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cozy and friendly web application designed to help pet owners keep their pets warm, healthy, and safe during winter. WarmPaws provides winter care services, expert tips, pet clothing options, grooming services, and more — all presented in a modern, responsive UI built with React, TailwindCSS, and DaisyUI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Live Demo
+🔗 **Live URL:** *Add your Vercel/Netlify/Firebase hosting link here*
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✅ Purpose of the Project
+WarmPaws is a winter-season pet-care themed website created to practice:
 
-## Expanding the ESLint configuration
+- React fundamentals  
+- React Router & dynamic routing  
+- Firebase authentication (Login, Register, User Profile)  
+- Protected routes  
+- JSON-based data fetching  
+- Component design  
+- TailwindCSS + DaisyUI styling  
+- Form handling  
+- Swiper hero slider implementation  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✅ Key Features
+
+### 🏠 Home Page
+- Winter-themed Swiper hero slider  
+- Popular Winter Care Services section (JSON data mapped into cards)  
+- Winter Care Tips section (static)  
+- Meet Our Expert Vets section (static)
+
+### 🔐 Authentication
+- Firebase Login & Register  
+- onAuthStateChanged observer  
+- Redirect to previous page after login  
+- Display user avatar, name, email  
+- Logout functionality  
+
+### 👤 My Profile Page
+- Shows user name, email, and photo  
+- "Update Profile" button (future feature)
+
+### 📝 Service Details Page
+- Displays ALL fields from service JSON  
+- Includes a booking form (Name, Email)  
+- Shows success toast notification  
+- Form clears after submission  
+
+### 🧭 Navigation
+- Dynamic Navbar (login/register OR avatar/logout)  
+- Protected routes using PrivateRoute  
+- Persistent Navbar & Footer
+
+---
+
+## ✅ Tech Stack
+
+### **Frontend**
+- React  
+- React Router DOM  
+- TailwindCSS  
+- DaisyUI  
+- Swiper JS  
+- React Toastify  
+
+### **Backend / Auth**
+- Firebase Authentication  
+
+---
+
+## ✅ JSON Data
+The project uses a local `services.json` file containing 6+ winter pet care services including:
+- Service Name  
+- Provider Info  
+- Rating  
+- Price  
+- Category  
+- Description  
+- Image URL  
+- Slots available  
+
+---
+
+## ✅ NPM Packages Used
+
+| Package | Purpose |
+|--------|---------|
+| `react` | Core UI library |
+| `react-router-dom` | Routing & navigation |
+| `firebase` | Authentication (Login, Register, Observer) |
+| `tailwindcss` | Styling |
+| `daisyui` | UI components & theming |
+| `swiper` | Hero slider |
+| `react-toastify` | Toaster notifications |
+| `prop-types` | Type checking (optional) |
+

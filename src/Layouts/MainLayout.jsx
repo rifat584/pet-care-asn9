@@ -7,9 +7,13 @@ import MainContainer from "../Container/MainContainer";
 const MainLayout = () => {
   return (
     <MainContainer>
-      <Navbar />
+      <nav>
+        <Navbar />
+      </nav>
       <Outlet></Outlet>
-      <Footer></Footer>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </MainContainer>
   );
 };

@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/nsvb18Mg/image.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo to prevent dryness.",
+    "image": "https://i.ibb.co.com/SXTrxQVH/image.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Rentals",
+    "providerName": "WarmNest Supplies",
+    "providerEmail": "support@warmnest.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Rent cozy heated beds for dogs and cats to keep them safe and comfortable during chilly nights.",
+    "image": "https://i.ibb.co.com/WrLpsBZ/image.png",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Vet Health Check",
+    "providerName": "SnowTail Veterinary Clinic",
+    "providerEmail": "contact@snowtailvet.com",
+    "price": 45,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "Full winter health checkup for your pet including temperature, joint health, and fur condition.",
+    "image": "https://i.ibb.co.com/mCdGzzP0/image.png",
+    "category": "Health"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Warm Jacket & Boot Combo",
+    "providerName": "FurFashion Hub",
+    "providerEmail": "sales@furfashionhub.com",
+    "price": 35,
+    "rating": 4.6,
+    "slotsAvailable": 7,
+    "description": "Trendy winter jackets with anti-slip boots for dogs and cats. Designed for both style and warmth.",
+    "image": "https://i.ibb.co.com/HDb7kgzV/image.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Nutritional Winter Meal Plan",
+    "providerName": "HealthyPaws Kitchen",
+    "providerEmail": "info@healthypaws.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Customized diet plans to boost your pet's energy and immunity during the winter season.",
+    "image": "https://i.ibb.co.com/hJYJJypt/image.png",
+    "category": "Nutrition"
+  }
+]

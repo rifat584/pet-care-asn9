@@ -1,4 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light
-}
+  themes: light --default;
+};
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  --color-primary: #3A7D99; 
+  --color-secondary: #FF7CA3;
+  --color-accent: #F9EEDB; 
+  --color-base-200: #F7FAFC;
+  --color-base-300: #364153;
+  --color-neutral: #4A4A4A;
+  --color-success: #64C27B;
+  --color-warning: #FFB85C;
+  --color-error: #FF6B6B;
+};
+
+*{
+  font-family: "Quicksand", sans-serif;
+};
