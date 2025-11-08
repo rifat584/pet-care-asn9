@@ -29,6 +29,7 @@ const ServiceDetails = () => {
     const data = { name: name, email: email };
 
     setFormData(data);
+    e.target.reset()
   };
   return (
     <ContentLayout>

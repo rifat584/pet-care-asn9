@@ -1,15 +1,25 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast, ToastContainer } from "react-toastify";
+import { useLocation } from "react-router";
 
 const ForgetPassword = () => {
   const {resetPass}= use(AuthContext);
+  
+  // get email automatically
+  const {search}= useLocation()
+  const query= new URLSearchParams(search)
+  const autoEmail = query.get("email") || ""
+  const [email, setEmail]= useState(autoEmail)
+
   const handleResetPassword = (e)=>{
     e.preventDefault();
-    const email= e.target.email.value
-    console.log("test click");
     resetPass(email)
-    .then(()=>toast("Password Reset Email Sent!"))
+    .then(()=>{toast("Password Reset Email Sent!");
+      setTimeout(()=>{
+        window.location.href = "https://mail.google.com";
+      },3000)
+    })
     .catch(err=>toast(err.message))
     
   }
@@ -21,6 +31,8 @@ const ForgetPassword = () => {
         <input
           name="email"
           type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
           className="input w-full"
           placeholder="Enter your Email"
         />

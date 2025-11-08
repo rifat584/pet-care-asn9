@@ -2,7 +2,7 @@ import React from "react";
 import petImg from "../assets/flouffy.jpg";
 const WinterCare = () => {
   return (
-    <div className="p-16 flex flex-col items-center w-full mx-auto">
+    <div className="md:p-16 flex flex-col items-center w-full mx-auto">
       <h2 className="text-4xl font-bold mb-6 text-center">
         Winter Care Tips for Pets
       </h2>

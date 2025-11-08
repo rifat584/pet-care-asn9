@@ -1,5 +1,7 @@
 import React, { use } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router";
+
 
 const MyProfile = () => {
   const { user } = use(AuthContext);
@@ -10,7 +12,7 @@ const MyProfile = () => {
 
       <div className="bg-white shadow-lg p-8 rounded-2xl flex flex-col items-center gap-6">
         <img
-          src={user?.photoURL || ""}
+          src={user?.photoURL || "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"}
           className="w-32 h-32 rounded-full object-cover border-4 border-blue-500/40 shadow"
         />
 
@@ -20,9 +22,9 @@ const MyProfile = () => {
           </h2>
           <p className="text-gray-600">{user?.email}</p>
         </div>
-        <button className="btn btn-primary hover:bg-secondary border-none mt-4 text-base-200 transition-colors">
+        <Link to={"/update-profile"} className="btn btn-primary hover:bg-secondary border-none mt-4 text-base-200 transition-colors">
           Update Profile
-        </button>
+        </Link>
       </div>
     </div>
   );

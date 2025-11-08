@@ -3,13 +3,12 @@ import { Link } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { user, logOut } = use(AuthContext);
+  const { user, logOut, loading } = use(AuthContext);
   const handleLogOut = () => {
     logOut();
   };
-
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-12">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,16 +29,16 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-200 rounded-box z-20 mt-3 w-52 p-2 shadow"
           >
             <li>
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to={"/services"}>Products</Link>
+              <Link to={"/services"}>Services</Link>
             </li>
             <li>
-              <Link to={"/profile"}>About Us</Link>
+              <Link to={"/profile"}>My Profile</Link>
             </li>
           </ul>
         </div>
@@ -61,20 +60,24 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {user ? (
-          <div className="flex gap-4 items-center">
-            <img
-              src={user.photoURL}
-              alt=""
-              className="h-8 w-8 rounded-full"
-              title={user.displayName}
-            />
-            <button className="btn btn-primary" onClick={handleLogOut}>
+        {loading ? (
+          <span className="loading loading-ring loading-sm"></span>
+        ) : user ? (
+          <div className="flex gap-4 items-center overflow-hidden">
+            <Link to={"/profile"}>
+              <img
+                src={user.photoURL}
+                alt=""
+                className="h-8 w-8 rounded-full object-cover "
+                title={user.displayName}
+              />
+            </Link>
+            <button className="btn btn-primary border-none" onClick={handleLogOut}>
               Logout
             </button>
           </div>
         ) : (
-          <Link to={"/login"} className="btn btn-primary">
+          <Link to={"/login"} className="btn btn-primary hover:btn-neutral border-none">
             Login
           </Link>
         )}

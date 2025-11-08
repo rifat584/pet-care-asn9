@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router";
 
 const Services = () => {
   const data= useLoaderData()
-  console.log(data);
   return (
     <div>
       <h2 className="text-4xl font-semibold text-center mb-10">Popular Winter Care Services</h2>
